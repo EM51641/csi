@@ -6,6 +6,16 @@ inputs:
       required: true
       type: string
 
+    poetry-virtualenv:
+      required: false
+      type: boolean
+      default: true
+    
+    poetry-virtualenvs-in-project:
+      required: false
+      type: boolean
+      default: true
+
     python-version:
       required: true
       type: string
@@ -27,8 +37,8 @@ runs:
       uses: snok/install-poetry@v1
       with:
         version: ${{ inputs.poetry-version }}
-        virtualenvs-create: true
-        virtualenvs-in-project: true
+        virtualenvs-create: ${{ inputs.poetry-virtualenv }}
+        virtualenvs-in-project: ${{ inputs.poetry-virtualenvs-in-project }}
 
     - name: Install project
       run: poetry install --no-root --no-interaction

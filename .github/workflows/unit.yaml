@@ -22,8 +22,11 @@ jobs:
       - name: Set up Python & Poetry
         uses: EM51641/csi/.github/actions/build_pyvalidator@main
         with:
-          poetry_version: "1.6.1"
-          python_version: "3.11.5"
+          poetry-version: "1.6.1"
+          python-version: "3.11.5"
+          poetry-virtualenv: false
+          poetry-virtualenvs-in-project: false
+
 
       - name: Execute Pytest
         run: poetry run python -m pytest --cov=pycsi tests/unit
