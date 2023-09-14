@@ -122,7 +122,7 @@ validator = AsyncValidator()
 validator.add(first_subvalidator)
 validator.add(second_subvalidator)
 
-validator.run()
+await validator.run()
 print(validator.unvalidated_set)
 {ValidatorError(condition='First condition', error_message='Number is not divisible by 3')}
 ```
