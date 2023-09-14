@@ -1,7 +1,7 @@
 | | |
 | --- | --- |
 | Python| ![Python](https://img.shields.io/pypi/pyversions/pycsi) |
-| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/pycsi.svg)](https://pypi.org/project/pycsi/) [![PyPI Downloads](https://img.shields.io/pypi/dm/pycsi.svg?label=PyPI%20downloads)](https://pypi.org/project/pycsi/) [![codecov](https://codecov.io/gh/EM51641/csi/graph/badge.svg?token=K1VoKFacbb)](https://codecov.io/gh/EM51641/csi)|
+| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/pycsi.svg)](https://pypi.org/project/pycsi/) [![PyPI Downloads](https://img.shields.io/pypi/dm/pycsi.svg?label=PyPI%20downloads)](https://pypi.org/project/pycsi/) [![codecov](https://codecov.io/gh/EM51641/csi/graph/badge.svg?token=K1VoKFacbb)](https://codecov.io/gh/EM51641/csi) [![Unit Tests](https://github.com/EM51641/csi/actions/workflows/unit.yaml/badge.svg)](https://github.com/EM51641/csi/actions/workflows/unit.yaml)|
 | Meta | [![License - MIT](https://img.shields.io/pypi/l/pycsi.svg)](https://github.com/EM51641/csi/blob/main/LICENSE)|
 
 
