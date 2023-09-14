@@ -1,0 +1,29 @@
+name: Linting
+
+on: 
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+  workflow_call:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Set up Python & Poetry
+        uses: EM51641/csi/.github/actions/build_pyvalidator@main
+        with:
+          poetry_version: "1.6.1"
+          python_version: "3.11.5"
+
+      - name: Execute flake8
+        run: poetry run flake8 pycsi

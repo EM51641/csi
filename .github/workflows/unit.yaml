@@ -1,0 +1,34 @@
+name: Unit Tests
+
+on: 
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+  
+  workflow_call:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Set up Python & Poetry
+        uses: EM51641/csi/.github/actions/build_pyvalidator@main
+        with:
+          poetry_version: "1.6.1"
+          python_version: "3.11.5"
+
+      - name: Execute Pytest
+        run: poetry run python -m pytest --cov=pycsi tests/unit
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
